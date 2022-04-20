@@ -1,0 +1,16 @@
+<p> Add new server and blueprint</p>
+<div>
+  <label for="sname"> Server name</label>
+  <input (keyup)="sname(sn.value)" id="sname" #sn> 
+  <label for="scontent"> Server Content</label>
+  <input (keyup)="scontent(sc.value)"  id="scontent" #sc>
+</div>
+<div>
+  <button (click)="showname()"> Add Server</button>
+  <button (click)="showcontent()"> Add Blueprint</button>
+</div>
+<ul *ngFor="let nm of names; let i=index">
+<li *ngIf="nm.type=='servname' "> {{i}}  name is {{nm.nmm}}</li>
+<li *ngIf="nm.type=='servcontent' "> {{i}}  content is {{nm.cnt}}</li>
+<p> {{sc.value}}</p>
+</ul>
